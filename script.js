@@ -11,5 +11,16 @@ function modifyCanvas(numberOfTiles) {
     }    
 }
 
+const sizeInputBar = document.querySelector('#sizeInputBar')
+sizeInputBar.addEventListener("keypress", (e) => {
+    if (e.key == 'Enter') {
+        modifyCanvas(sizeInputBar.value);
+    }
+})
+
+const confirmButton = document.querySelector('.confirmButton')
+confirmButton.addEventListener('click', () => {
+    modifyCanvas(sizeInputBar.value);
+})
 
 modifyCanvas(1)
