@@ -10,7 +10,7 @@ function modifyCanvas(numberOfTiles) {
     while (canvas.firstChild) {
         canvas.removeChild(canvas.firstChild);
     }
-    for (let i = 0; i < numberOfTiles; i++) {
+    for (let i = 0; i < numberOfTiles**2; i++) {
         canvas.appendChild(canvasTile.cloneNode(true));    
     }    
 }

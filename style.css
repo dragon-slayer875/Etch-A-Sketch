@@ -30,11 +30,12 @@ body {
     height: 500px;
     background-color: beige;
     align-self: center;
+    display: flex;
 }
 
 .tile {
-    width: 100%;
-    height: 100%;
+    flex: 1;
+    aspect-ratio: 1/1;
     background-color: brown;
     border: 5px solid #3882F6;
 }
