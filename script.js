@@ -1,13 +1,17 @@
 const canvasTile = document.createElement('div')
 canvasTile.className = 'tile';
+const canvas = document.querySelector('.canvas')
 
 function modifyCanvas(numberOfTiles) {
     if (numberOfTiles > 100) {
         alert("Canvas too big! Enter a value less than 100.")
         return;
     }
+    while (canvas.firstChild) {
+        canvas.removeChild(canvas.firstChild);
+    }
     for (let i = 0; i < numberOfTiles; i++) {
-        document.querySelector('.canvas').appendChild(canvasTile)    
+        canvas.appendChild(canvasTile.cloneNode(true));    
     }    
 }
 
