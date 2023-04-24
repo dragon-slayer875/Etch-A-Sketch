@@ -25,6 +25,11 @@ body {
     max-width: 100px;
 }
 
+.resetButton {
+    flex: 1;
+    max-width: 100px;
+}
+
 .canvas {
     width: 400px;
     height: 400px;
