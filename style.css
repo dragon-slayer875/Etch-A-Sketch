@@ -34,12 +34,10 @@ body {
 }
 
 .tile {
-    flex: 1;
     aspect-ratio: 1/1;
-    background-color: brown;
-    border: 5px solid #3882F6;
+    background-color: beige;
 }
 
 .tileSelected {
-    background-color: #3882F6;
+    background-color: #1d1d1d;
 }
