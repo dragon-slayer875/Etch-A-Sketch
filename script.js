@@ -1,12 +1,14 @@
 const canvasTile = document.createElement('div')
 canvasTile.className = 'tile';
 const canvas = document.querySelector('.canvas')
+canvas.style = `grid-template-columns: repeat(1, 1fr); grid-template-rows: repeat(1, 1fr);`
 
 function modifyCanvas(numberOfTiles) {
     if (numberOfTiles > 100) {
         alert("Canvas too big! Enter a value less than 100.")
         return;
     }
+    canvas.style = `grid-template-columns: repeat(${numberOfTiles}, 1fr); grid-template-rows: repeat(${numberOfTiles}, 1fr);`
     while (canvas.firstChild) {
         canvas.removeChild(canvas.firstChild);
     }
