@@ -22,7 +22,7 @@ function modifyCanvas(numberOfTiles) {
     canvasTiles.forEach(tile => {
         tile.addEventListener('click', () => {
             tile.classList.add('tileSelected')
-        } )
+        })
     });
     canvasTiles.forEach(tile => {
         tile.addEventListener('mouseenter', (e) => {
@@ -44,6 +44,14 @@ sizeInputBar.addEventListener("keypress", (e) => {
 const confirmButton = document.querySelector('.confirmButton')
 confirmButton.addEventListener('click', () => {
     modifyCanvas(sizeInputBar.value);
+})
+
+const resetButton = document.querySelector('.resetButton')
+resetButton.addEventListener('click', () => {
+    const canvasTiles = document.querySelectorAll('.tile')
+    canvasTiles.forEach(tile => {
+        tile.classList.remove('tileSelected')
+    });
 })
 
 modifyCanvas(1)
