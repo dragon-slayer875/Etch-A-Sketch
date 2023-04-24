@@ -20,7 +20,7 @@ function modifyCanvas(numberOfTiles) {
     
     const canvasTiles = document.querySelectorAll('.tile')
     canvasTiles.forEach(tile => {
-        tile.addEventListener('click', () => {
+        tile.addEventListener('mousedown', () => {
             tile.classList.add('tileSelected')
         })
     });
