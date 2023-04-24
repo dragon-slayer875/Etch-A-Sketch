@@ -54,4 +54,4 @@ resetButton.addEventListener('click', () => {
     });
 })
 
-modifyCanvas(1)
+modifyCanvas(16)
