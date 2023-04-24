@@ -26,8 +26,8 @@ body {
 }
 
 .canvas {
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     background-color: beige;
     align-self: center;
     display: grid;
@@ -38,4 +38,8 @@ body {
     aspect-ratio: 1/1;
     background-color: brown;
     border: 5px solid #3882F6;
+}
+
+.tileSelected {
+    background-color: #3882F6;
 }

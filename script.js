@@ -14,7 +14,14 @@ function modifyCanvas(numberOfTiles) {
     }
     for (let i = 0; i < numberOfTiles**2; i++) {
         canvas.appendChild(canvasTile.cloneNode(true));    
-    }    
+    }
+    const canvasTiles = document.querySelectorAll('.tile')
+    canvasTiles.forEach(tile => {
+        tile.addEventListener('click', () => {
+            tile.classList.add('tileSelected')
+        } )
+        
+    });    
 }
 
 const sizeInputBar = document.querySelector('#sizeInputBar')
