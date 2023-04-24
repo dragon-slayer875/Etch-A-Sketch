@@ -8,19 +8,29 @@ function modifyCanvas(numberOfTiles) {
         alert("Canvas too big! Enter a value less than 100.")
         return;
     }
+
     canvas.style = `grid-template-columns: repeat(${numberOfTiles}, 1fr); grid-template-rows: repeat(${numberOfTiles}, 1fr);`
     while (canvas.firstChild) {
         canvas.removeChild(canvas.firstChild);
     }
+
     for (let i = 0; i < numberOfTiles**2; i++) {
         canvas.appendChild(canvasTile.cloneNode(true));    
     }
+    
     const canvasTiles = document.querySelectorAll('.tile')
     canvasTiles.forEach(tile => {
         tile.addEventListener('click', () => {
             tile.classList.add('tileSelected')
         } )
-        
+    });
+    canvasTiles.forEach(tile => {
+        tile.addEventListener('mouseenter', (e) => {
+            if (e.buttons == 0) {
+                return;
+            }
+            tile.classList.add('tileSelected')
+        } )
     });    
 }
 
